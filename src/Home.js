@@ -118,6 +118,10 @@ export function Home() {
           'https://randomuser.me/api/portraits/men/2.jpg',
         ]}
       />
+
+      <NumbersTable limit={12} />
+
+      <FaceBook />
     </>
   );
 }

@@ -11,3 +11,16 @@ export function BoxColor({ r, g, b }) {
     </div>
   );
 }
+
+// version 2
+export function BoxColor({ r, g, b }) {
+  return (
+    <div
+      className="container"
+      style={{ backgroundColor: `rgb(${r},${g},${b})` }}
+    >
+      rgb({r},{g},{b})
+    </div>
+  );
+}
+

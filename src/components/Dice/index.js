@@ -27,3 +27,35 @@ export function Dice(props) {
     </div>
   );
 }
+
+// version 2
+export function Dice() {
+  const dices = [
+    emptyDice,
+    diceOne,
+    diceTwo,
+    diceThree,
+    diceFour,
+    diceFive,
+    diceSix,
+  ];
+  const [index, setIndex] = useState(0);
+
+  function randomDice() {
+    setInterval(() => {
+      setIndex(Math.floor(Math.random() * (dices.length - 1)));
+    }, 1000);
+  }
+  console.log(index);
+
+  return (
+    <div>
+      <img
+        src={dices[index]}
+        alt="dice"
+        style={{ width: '150px' }}
+        onClick={randomDice}
+      />
+    </div>
+  );
+}

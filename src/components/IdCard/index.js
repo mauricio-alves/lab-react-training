@@ -19,6 +19,12 @@ export function IdCard({
       <p><strong>Gender: </strong>{gender}</p>
       <p><strong>Height: </strong>{height}m</p>
       <p><strong>Birth: </strong>{birth.toDateString()}</p>
+      {/* version 2
+      <p>
+          <strong>Birth: </strong>
+          {birth.toString().slice(0, 15)}
+        </p> */}
+
       </div>
     </div>
   );
